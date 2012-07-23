@@ -18,3 +18,6 @@
 	autosetupmerge = true
 [core]
 	editor = open -a 'Sublime Text 2'
+[user]
+	name = Marshall Yount
+	email = marshall@yountlabs.com
