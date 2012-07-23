@@ -4,7 +4,7 @@
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add rvm gems and nginx to the path
-export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
+export PATH=$PATH:~/.gem/ruby/1.8/bin:/usr/local/sbin
 
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
@@ -43,4 +43,22 @@ export TODO="t"
 # Load Bash It
 source $BASH_IT/bash_it.sh
 
-eval "$(hub alias -s)"
+eval "$(hub alias -s bash)"
+
+if [ "$TERM" != "dumb" ]; then
+  alias ls='gls -CF --color=auto'
+  export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+fi
+
+export OPEN_NI_INSTALL_PATH=/usr/local
+
+# make sure terminals wrap lines correctly after resizing them
+shopt -s checkwinsize
+
+# these are not currently used.
+# export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
+# export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
+# export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
+# export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+# export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
+# export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.4.2.2/jars"
