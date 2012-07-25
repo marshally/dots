@@ -3,7 +3,7 @@
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-# Add rvm gems and nginx to the path
+# Add rvm gems and brew's sbin
 export PATH=$PATH:~/.gem/ruby/1.8/bin:/usr/local/sbin
 
 # Path to the bash it configuration
