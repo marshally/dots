@@ -1,10 +1,37 @@
 #!/usr/bin/env bash
 
+# Load ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.extra
+# ~/.extra can be used for settings you don’t want to commit
+for file in ~/.{bash_prompt,exports,aliases,functions,extra}; do
+[ -r "$file" ] && source "$file"
+done
+unset file
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
+# Enable some Bash 4 features when possible:
+# * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
+# * Recursive globbing, e.g. `echo **/*.txt`
+# for option in autocd globstar; do
+# shopt -s "$option" 2> /dev/namesull
+# done
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add rvm gems and brew's sbin
-export PATH=$PATH:~/.gem/ruby/1.8/bin:/usr/local/sbin
+export PATH=$PATH:~/.gem/ruby/1.8/bin:/usr/local/sbin:/usr/local/Cellar/coreutils/8.17/libexec/gnubin
 
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
