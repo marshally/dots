@@ -43,6 +43,10 @@ export TODO="t"
 # Load Bash It
 source $BASH_IT/bash_it.sh
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
 eval "$(hub alias -s bash)"
 
 if [ "$TERM" != "dumb" ]; then
