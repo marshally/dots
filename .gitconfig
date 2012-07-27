@@ -17,9 +17,10 @@
 [branch]
 	autosetupmerge = true
 [core]
-	editor = open -a 'Sublime Text 2'
 [hub]
 	host = github-ca.corp.zynga.com
 [user]
 	name = Marshall Yount
 	email = myount@zynga.com
+[core]
+	editor = open -a 'Sublime Text 2' -nW
