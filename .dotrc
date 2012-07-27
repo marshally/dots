@@ -2,7 +2,7 @@
 #   Default: 'vim'
 #   Options: 'vi', 'vim', 'emacs', '[ANY OTHER TERMINAL BASED EDITOR]'
 #
-# editor: 'vi'
+editor: 'subl -w'
 #
 # Ignoring files in ~/.dotify when linking:
 #
