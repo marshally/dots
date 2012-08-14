@@ -45,7 +45,7 @@ export GIT_HOSTING='git@git.domain.com'
 
 # Set my editor and git editor
 export EDITOR="subl -w"
-export VISUAL="subl -w"
+export VISUAL="subl"
 export GIT_EDITOR='subl -w'
 
 # Set the path nginx
@@ -93,3 +93,5 @@ shopt -s checkwinsize
 # export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 # export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
 # export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.4.2.2/jars"
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
