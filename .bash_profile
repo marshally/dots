@@ -62,6 +62,7 @@ export IRC_CLIENT='irssi'
 # Set this to the command you use for todo.txt-cli
 
 export TODO="t"
+export OPEN_NI_INSTALL_PATH=/usr/local
 
 # Set vcprompt executable path for scm advance info in prompt (demula theme)
 # https://github.com/xvzf/vcprompt
