@@ -30,8 +30,8 @@ export LANG="en_US"
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-# Add rvm gems and brew's sbin
-export PATH=$PATH:~/.gem/ruby/1.8/bin:/usr/local/sbin:/usr/local/Cellar/coreutils/8.17/libexec/gnubin
+# Add brew's sbin
+export PATH=$PATH:/usr/local/sbin
 
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
@@ -77,9 +77,12 @@ fi
 
 eval "$(hub alias -s bash)"
 
-if [ "$TERM" != "dumb" ]; then
-  alias ls='gls -CF --color=auto'
-  export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+if which gls > /dev/null; then
+  export PATH=$PATH:`brew --prefix`/Cellar/coreutils/8.17/libexec/gnubin
+  if [ "$TERM" != "dumb" ]; then
+    alias ls='gls -CF --color=auto'
+    export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+  fi
 fi
 
 export OPEN_NI_INSTALL_PATH=/usr/local
