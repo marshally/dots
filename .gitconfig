@@ -28,5 +28,17 @@
 	email = marshall@yountlabs.com
 [core]
 	editor = open -a 'Sublime Text 2' -nW
+	excludesfile = /Users/marshallyount/.gitignore_global
 [push]
 	default = matching
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
