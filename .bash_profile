@@ -98,4 +98,8 @@ shopt -s checkwinsize
 # export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
 # export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.4.2.2/jars"
 
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_FREE_MIN=500000
+export RUBY_HEAP_MIN_SLOTS=40000
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
