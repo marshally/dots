@@ -44,9 +44,9 @@ export BASH_IT_THEME='bobby'
 export GIT_HOSTING='git@git.domain.com'
 
 # Set my editor and git editor
-export EDITOR="subl -w"
-export VISUAL="subl"
-export GIT_EDITOR='subl -w'
+export EDITOR="/usr/local/bin/subl"
+export VISUAL="/usr/local/bin/subl_wait"
+export GIT_EDITOR='/usr/local/bin/subl_wait'
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
